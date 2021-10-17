@@ -15,3 +15,19 @@ def sortLex(arr, text):
     
     arr.sort(key = lambda item: text[item:])
     return arr
+
+
+def main():
+    #Pide el texto al usuario
+    text = input("Ingrese el texto a procesar: ")
+    
+    #Obtiene el arreglo
+    arr = getWordsStartPosition(text)
+    print("El arreglo con las posiciones en el texto donde se inician las palabras es:\n",arr)
+    
+    #Ordena el arreglo lexicograficamente
+    sortedLexArr = sortLex(arr, text)
+    print("El arreglo ordenado de acuerdo con el orden lexicográfico de los sufijos apuntados es:\n",sortedLexArr)
+
+
+main()
