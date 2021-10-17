@@ -9,3 +9,9 @@ def getWordsStartPosition(text):
         if(text[i]!=' ' and text[i-1]==' '):
             res.append(i)
     return res
+
+#Ordena el array segun orden lexicografico de los sufijos apuntados
+def sortLex(arr, text):
+    
+    arr.sort(key = lambda item: text[item:])
+    return arr
